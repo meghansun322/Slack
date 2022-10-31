@@ -12,13 +12,18 @@ struct ChannelView: View {
     @State var channel_name = "annoucements"
     @State var member_count = 62
     @State var pin_count = 13
+    @State var messages: [Message] = [
+        Message(name: "Meghan Sun", profile_pic: "meghansun", time: "10:00 PM", message: "hey, hey"),
+        Message(name: "Meghan Sun", profile_pic: "meghansun", time: "10:01 PM", message: "how is it going??")
+    ]
+    private var myMessage = Message(name: "Meghan Sun", profile_pic: "meghansun", time: "10:00 PM", message: "hey, hey")
     
     var body: some View {
         NavigationStack{
             ZStack{
                 Color.black
                     .ignoresSafeArea()
-                VStack {
+                VStack (alignment: .leading){
                     HStack (spacing: 10){
                         Image(systemName: "chevron.left")
                             .foregroundColor(.white)
@@ -41,6 +46,11 @@ struct ChannelView: View {
                     
                     Divider()
                         .overlay(.gray)
+                    
+                    ForEach(messages, id: \.self){ item in
+                        messageView(message: item)
+                        
+                    }
                     
                     Spacer()
                     
@@ -113,6 +123,33 @@ struct ChannelView: View {
                 }
             }
         }    }
+}
+
+struct messageView: View {
+    let message: Message
+    
+    var body: some View {
+        HStack {
+            Image("\(message.profile_pic)")
+                .resizable()
+                .frame(width: 40, height: 40)
+                .cornerRadius(6)
+                .padding(5)
+            VStack (alignment: .leading){
+                HStack {
+                    Text("\(message.name)")
+                        .fontWeight(.bold)
+                    Text("\(message.time)")
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                }
+                Text("\(message.message)")
+                   
+            }
+            .foregroundColor(.white)
+        }
+        .foregroundColor(.gray)
+    }
 }
 
 struct ChannelView_Previews: PreviewProvider {
