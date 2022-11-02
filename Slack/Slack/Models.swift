@@ -14,3 +14,13 @@ struct Message: Codable, Hashable {
     let time: String
     let message: String
 }
+
+
+struct Channel: Codable, Hashable {
+    
+    let channel_name: String
+    let member_count: Int
+    let pin_count: Int
+    let messages: [Message]
+  
+}

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ChannelView: View {
     
+    @Binding var channel: Channel
     @State var channel_name = "annoucements"
     @State var member_count = 62
     @State var pin_count = 13
@@ -16,7 +17,7 @@ struct ChannelView: View {
         Message(name: "Meghan Sun", profile_pic: "meghansun", time: "10:00 PM", message: "hey, hey"),
         Message(name: "Meghan Sun", profile_pic: "meghansun", time: "10:01 PM", message: "how is it going??")
     ]
-    private var myMessage = Message(name: "Meghan Sun", profile_pic: "meghansun", time: "10:00 PM", message: "hey, hey")
+    var myMessage = Message(name: "Meghan Sun", profile_pic: "meghansun", time: "10:00 PM", message: "hey, hey")
     
     var body: some View {
         NavigationStack{
@@ -29,11 +30,11 @@ struct ChannelView: View {
                             .foregroundColor(.white)
                         
                         VStack{
-                            Text("# \(channel_name)")
+                            Text("# \(channel.channel_name)")
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                             
-                            Text("\(member_count) members, \(pin_count) pins")
+                            Text("\(channel.member_count) members, \(channel.pin_count) pins")
                                 .foregroundColor(.gray)
                                 .font(.footnote)
                             
@@ -60,7 +61,7 @@ struct ChannelView: View {
                     HStack{
                         Image(systemName: "plus.circle")
 
-                        Text("Message #\(channel_name)")
+                        Text("Message #\(channel.channel_name)")
                             .font(.title3)
                         
                         
@@ -154,6 +155,9 @@ struct messageView: View {
 
 struct ChannelView_Previews: PreviewProvider {
     static var previews: some View {
-        ChannelView()
+        ChannelView(channel: .constant(Channel(channel_name: "announcements", member_count: 70, pin_count: 2, messages: [
+            Message(name: "Meghan Sun", profile_pic: "meghansun", time: "10:00 PM", message: "hey, hey"),
+            Message(name: "Meghan Sun", profile_pic: "meghansun", time: "10:01 PM", message: "how is it going??")
+        ])))
     }
 }
