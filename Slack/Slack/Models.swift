@@ -8,14 +8,6 @@
 import Foundation
 
 
-struct Message: Codable, Hashable {
-    let name: String
-    let profile_pic: String
-    let time: String
-    let message: String
-}
-
-
 struct Channel: Codable, Hashable {
     
     let channel_name: String

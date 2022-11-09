@@ -12,8 +12,11 @@
 		241C4602290F3C8500E43262 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241C4601290F3C8500E43262 /* Assets.xcassets */; };
 		241C4605290F3C8500E43262 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241C4604290F3C8500E43262 /* Preview Assets.xcassets */; };
 		241C460E290F3DDC00E43262 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C460D290F3DDC00E43262 /* ChannelView.swift */; };
-		241C4610290F466400E43262 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C460F290F466400E43262 /* Models.swift */; };
 		241C46362911E81700E43262 /* ChannelsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C46352911E81700E43262 /* ChannelsFeedView.swift */; };
+		2452E24E29193E2F00B1E177 /* ChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452E24D29193E2F00B1E177 /* ChannelListViewModel.swift */; };
+		2461874D29152D4300132630 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461874C29152D4300132630 /* Message.swift */; };
+		2461874F29152D5900132630 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461874E29152D5900132630 /* Channel.swift */; };
+		2461875129152E0E00132630 /* ChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461875029152E0E00132630 /* ChannelViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +26,11 @@
 		241C4601290F3C8500E43262 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		241C4604290F3C8500E43262 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		241C460D290F3DDC00E43262 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
-		241C460F290F466400E43262 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		241C46352911E81700E43262 /* ChannelsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsFeedView.swift; sourceTree = "<group>"; };
+		2452E24D29193E2F00B1E177 /* ChannelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewModel.swift; sourceTree = "<group>"; };
+		2461874C29152D4300132630 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		2461874E29152D5900132630 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		2461875029152E0E00132630 /* ChannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +68,11 @@
 				241C4601290F3C8500E43262 /* Assets.xcassets */,
 				241C4603290F3C8500E43262 /* Preview Content */,
 				241C460D290F3DDC00E43262 /* ChannelView.swift */,
-				241C460F290F466400E43262 /* Models.swift */,
 				241C46352911E81700E43262 /* ChannelsFeedView.swift */,
+				2461874C29152D4300132630 /* Message.swift */,
+				2461874E29152D5900132630 /* Channel.swift */,
+				2461875029152E0E00132630 /* ChannelViewModel.swift */,
+				2452E24D29193E2F00B1E177 /* ChannelListViewModel.swift */,
 			);
 			path = Slack;
 			sourceTree = "<group>";
@@ -146,10 +155,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2461874F29152D5900132630 /* Channel.swift in Sources */,
+				2461875129152E0E00132630 /* ChannelViewModel.swift in Sources */,
 				241C460E290F3DDC00E43262 /* ChannelView.swift in Sources */,
 				241C4600290F3C8300E43262 /* ContentView.swift in Sources */,
 				241C45FE290F3C8300E43262 /* SlackApp.swift in Sources */,
-				241C4610290F466400E43262 /* Models.swift in Sources */,
+				2461874D29152D4300132630 /* Message.swift in Sources */,
+				2452E24E29193E2F00B1E177 /* ChannelListViewModel.swift in Sources */,
 				241C46362911E81700E43262 /* ChannelsFeedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
