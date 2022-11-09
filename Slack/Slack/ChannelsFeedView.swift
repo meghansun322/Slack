@@ -7,35 +7,37 @@
 
 import SwiftUI
 
+extension Color {
+    static let oldPrimaryColor = Color(UIColor.systemIndigo)
+    static let newPrimaryColor = Color("misty-gray")
+}
+
 struct ChannelsFeedView: View {
     @State var search = ""
     
     @StateObject var vm = ChannelListViewModel()
     
-    let directMessageProfiles = [Profile(name: "Meghan Sun (you)", image: "meghansun"), Profile(name: "Alec Nipp", image: "yellow-profile"), Profile(name: "Kush S", image: "blue-profile"), Profile(name: "David Williams",  image: "yellow-profile")]
+    let directMessageProfiles = [Profile(name: "Meghan Sun (you)", image: "meghansun"), Profile(name: "Alec Nipp", image: "yellow-profile")]
     
+ 
     
     var body: some View {
         
         NavigationStack {
             
             ZStack{
-                Color.black
+                Color.newPrimaryColor
                     .ignoresSafeArea()
                 
                 VStack{
                     
                     FeedsHeaderView()
-                    
-                    Divider()
-                        .overlay(.white)
-                    
-                    
+                
                     ScrollView {
                         VStack (alignment: .leading, spacing: 20){
                             
                             TopFeedView(search: $search)
-                                .padding([.leading, .trailing], 5)
+                               
                             
                             Divider()
                                 .overlay(.white)
@@ -48,6 +50,7 @@ struct ChannelsFeedView: View {
                                     ChannelView(channel: ChannelViewModel(channel: channel))
                                 } label: {
                                     ChannelsFeedRowView(symbol: "number", name: channel.name)
+                                    
                                 }
                             }
                             
@@ -72,10 +75,12 @@ struct ChannelsFeedView: View {
                             
                         }
                     }
-                    Spacer()
+                    Divider()
+                        .overlay(.white)
+                    footerIconView()
+                    
                 }
                 .foregroundColor(.white)
-               
             }
             
         }
@@ -87,6 +92,12 @@ struct ChannelsFeedView_Previews: PreviewProvider {
         ChannelsFeedView()
     }
 }
+
+struct Profile: Hashable {
+    var name: String
+    var image: String
+}
+
 
 struct FeedsHeaderView: View {
     var body: some View{
@@ -102,8 +113,9 @@ struct FeedsHeaderView: View {
             Spacer()
             Image(systemName: "line.3.horizontal.decrease")
         }
-        .padding([.trailing, .leading])
+        .padding([.trailing, .leading, .bottom])
         .foregroundColor(.white)
+        .background(Color.black)
     }
 }
 
@@ -123,6 +135,7 @@ struct TopFeedView: View {
                     .stroke(Color.white, lineWidth: 0.5)
             )
             .padding(.top, 5)
+            .padding([.leading, .trailing], 10)
             .foregroundColor(Color.white)
         
         ChannelsFeedRowView(symbol: "ellipsis.message", name: "Threads")
@@ -143,13 +156,9 @@ struct FeedHeadingView: View {
             
             Image(systemName: "chevron.down")
         }
+        .padding([.leading, .trailing], 10)
         
     }
-}
-
-struct Profile: Hashable {
-    var name: String
-    var image: String
 }
 
 
@@ -164,7 +173,8 @@ struct ChannelsFeedRowView: View {
                 .padding(.trailing, 8)
             Text(name)
         }
-        .padding([.bottom, .leading], 5)
+        .padding(.bottom, 5)
+        .padding([.leading, .trailing], 10)
        
     }
 }
@@ -186,6 +196,66 @@ struct DirectMessageView: View {
                 
         }
         .padding([.leading], 5)
+        .padding([.leading, .trailing], 10)
+        
+    }
+}
+
+struct footerIconView: View {
+    
+    var body: some View{
+        HStack (spacing: 35) {
+       
+            
+            Group {
+        
+                VStack {
+                    Image(systemName: "house.fill")
+                        .padding(.bottom, 1)
+                    Text("Home")
+                        .font(.subheadline)
+                }
+                .foregroundColor(.white)
+                
+                
+                VStack{
+                    Image(systemName: "message")
+                        .padding(.bottom, 1)
+                    Text("DMs")
+                        .font(.subheadline)
+                }
+                
+                
+                VStack{
+                    Image(systemName: "at")
+                        .padding(.bottom, 1)
+                    Text("Mentions")
+                        .font(.subheadline)
+                }
+                
+                
+                VStack{
+                    Image(systemName: "magnifyingglass")
+                        .padding(.bottom, 1)
+                    Text("Search")
+                        .font(.subheadline)
+                }
+                
+                
+                VStack{
+                    Image(systemName: "face.smiling")
+                        .padding(.bottom, 1)
+                    Text("You")
+                        .font(.subheadline)
+                }
+                
+            }
+          
+            
+        }
+        .foregroundColor(.gray)
+        .padding(.top, 5)
+    
         
     }
 }
