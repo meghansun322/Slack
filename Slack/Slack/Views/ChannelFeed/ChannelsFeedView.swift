@@ -12,10 +12,6 @@ struct ChannelsFeedView: View {
     
     @StateObject var vm = ChannelListViewModel()
     
-    let directMessageProfiles = [Profile(name: "Meghan Sun (you)", image: "meghansun"), Profile(name: "Alec Nipp", image: "yellow-profile")]
-    
- 
-    
     var body: some View {
         
         NavigationStack {
@@ -42,7 +38,7 @@ struct ChannelsFeedView: View {
                             
                             ForEach($vm.channels, id: \.self) { $channel in
                                 NavigationLink {
-                                    ChannelView(channel: ChannelViewModel(channel: channel))
+                                    ChannelView(channel: channel)
                                 } label: {
                                     ChannelsFeedRowView(symbol: "number", name: channel.name)
                                     
@@ -63,7 +59,7 @@ struct ChannelsFeedView: View {
                             FeedHeadingView(title: "Direct Messages")
                            
                           
-                            ForEach(directMessageProfiles, id: \.self) { profile in
+                            ForEach(Profile.profiles_example, id: \.self) { profile in
                                 DirectMessageView(profile: profile)
                                 
                             }
@@ -74,7 +70,7 @@ struct ChannelsFeedView: View {
                     Divider()
                         .overlay(.white)
                     
-                    footerIconView()
+                    FooterView()
                 }
                 .foregroundColor(Color("light-gray"))
             }
@@ -87,11 +83,6 @@ struct ChannelsFeedView_Previews: PreviewProvider {
     static var previews: some View {
         ChannelsFeedView()
     }
-}
-
-struct Profile: Hashable {
-    var name: String
-    var image: String
 }
 
 
@@ -120,7 +111,7 @@ struct TopFeedView: View {
     
     var body: some View {
         
-        SuperTextField(
+        CustomTextField(
             placeholder: Text("Jump to...").foregroundColor(.white),
             text:  $search
         )
@@ -199,60 +190,4 @@ struct DirectMessageView: View {
     }
 }
 
-struct footerIconView: View {
-    
-    var body: some View{
-        HStack (spacing: 35) {
-       
-            
-            Group {
-        
-                VStack {
-                    Image(systemName: "house.fill")
-                        .padding(.bottom, 1)
-                    Text("Home")
-                        .font(.subheadline)
-                }
-                .foregroundColor(.white)
-                
-                
-                VStack{
-                    Image(systemName: "message")
-                        .padding(.bottom, 1)
-                    Text("DMs")
-                        .font(.subheadline)
-                }
-                
-                
-                VStack{
-                    Image(systemName: "at")
-                        .padding(.bottom, 1)
-                    Text("Mentions")
-                        .font(.subheadline)
-                }
-                
-                
-                VStack{
-                    Image(systemName: "magnifyingglass")
-                        .padding(.bottom, 1)
-                    Text("Search")
-                        .font(.subheadline)
-                }
-                
-                
-                VStack{
-                    Image(systemName: "face.smiling")
-                        .padding(.bottom, 1)
-                    Text("You")
-                        .font(.subheadline)
-                }
-                
-            }
-          
-            
-        }
-        .foregroundColor(.gray)
-        .padding(.top, 5)
-    }
-}
 

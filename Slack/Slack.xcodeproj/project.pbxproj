@@ -14,9 +14,14 @@
 		241C460E290F3DDC00E43262 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C460D290F3DDC00E43262 /* ChannelView.swift */; };
 		241C46362911E81700E43262 /* ChannelsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C46352911E81700E43262 /* ChannelsFeedView.swift */; };
 		2452E24E29193E2F00B1E177 /* ChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452E24D29193E2F00B1E177 /* ChannelListViewModel.swift */; };
-		2461874D29152D4300132630 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461874C29152D4300132630 /* Message.swift */; };
-		2461874F29152D5900132630 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461874E29152D5900132630 /* Channel.swift */; };
-		2461875129152E0E00132630 /* ChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461875029152E0E00132630 /* ChannelViewModel.swift */; };
+		24E1975D291D55B400EACA97 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1975C291D55B400EACA97 /* Channel.swift */; };
+		24E1975F291D562300EACA97 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1975E291D562300EACA97 /* Message.swift */; };
+		24E19761291D566200EACA97 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E19760291D566200EACA97 /* Profile.swift */; };
+		24E19763291D56AF00EACA97 /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E19762291D56AF00EACA97 /* Reaction.swift */; };
+		24E19767291D613500EACA97 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E19766291D613500EACA97 /* HeaderView.swift */; };
+		24E19769291D617000EACA97 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E19768291D617000EACA97 /* FooterView.swift */; };
+		24E1976B291D62A500EACA97 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1976A291D62A500EACA97 /* MessageView.swift */; };
+		24E1976D291D646900EACA97 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1976C291D646900EACA97 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +33,14 @@
 		241C460D290F3DDC00E43262 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
 		241C46352911E81700E43262 /* ChannelsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsFeedView.swift; sourceTree = "<group>"; };
 		2452E24D29193E2F00B1E177 /* ChannelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewModel.swift; sourceTree = "<group>"; };
-		2461874C29152D4300132630 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		2461874E29152D5900132630 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
-		2461875029152E0E00132630 /* ChannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewModel.swift; sourceTree = "<group>"; };
+		24E1975C291D55B400EACA97 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		24E1975E291D562300EACA97 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		24E19760291D566200EACA97 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		24E19762291D56AF00EACA97 /* Reaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
+		24E19766291D613500EACA97 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		24E19768291D617000EACA97 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		24E1976A291D62A500EACA97 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		24E1976C291D646900EACA97 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,15 +73,12 @@
 		241C45FC290F3C8300E43262 /* Slack */ = {
 			isa = PBXGroup;
 			children = (
+				24E19764291D609E00EACA97 /* Views */,
+				24E1975B291D55A500EACA97 /* Models */,
 				241C45FD290F3C8300E43262 /* SlackApp.swift */,
 				241C45FF290F3C8300E43262 /* ContentView.swift */,
 				241C4601290F3C8500E43262 /* Assets.xcassets */,
 				241C4603290F3C8500E43262 /* Preview Content */,
-				241C460D290F3DDC00E43262 /* ChannelView.swift */,
-				241C46352911E81700E43262 /* ChannelsFeedView.swift */,
-				2461874C29152D4300132630 /* Message.swift */,
-				2461874E29152D5900132630 /* Channel.swift */,
-				2461875029152E0E00132630 /* ChannelViewModel.swift */,
 				2452E24D29193E2F00B1E177 /* ChannelListViewModel.swift */,
 			);
 			path = Slack;
@@ -83,6 +90,46 @@
 				241C4604290F3C8500E43262 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		24E1975B291D55A500EACA97 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				24E1975C291D55B400EACA97 /* Channel.swift */,
+				24E1975E291D562300EACA97 /* Message.swift */,
+				24E19760291D566200EACA97 /* Profile.swift */,
+				24E19762291D56AF00EACA97 /* Reaction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		24E19764291D609E00EACA97 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				24E1976E291D654700EACA97 /* Channel */,
+				24E19765291D60F300EACA97 /* ChannelFeed */,
+				24E19768291D617000EACA97 /* FooterView.swift */,
+				24E1976C291D646900EACA97 /* CustomTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		24E19765291D60F300EACA97 /* ChannelFeed */ = {
+			isa = PBXGroup;
+			children = (
+				241C46352911E81700E43262 /* ChannelsFeedView.swift */,
+				24E19766291D613500EACA97 /* HeaderView.swift */,
+			);
+			path = ChannelFeed;
+			sourceTree = "<group>";
+		};
+		24E1976E291D654700EACA97 /* Channel */ = {
+			isa = PBXGroup;
+			children = (
+				241C460D290F3DDC00E43262 /* ChannelView.swift */,
+				24E1976A291D62A500EACA97 /* MessageView.swift */,
+			);
+			path = Channel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,12 +202,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2461874F29152D5900132630 /* Channel.swift in Sources */,
-				2461875129152E0E00132630 /* ChannelViewModel.swift in Sources */,
+				24E1976D291D646900EACA97 /* CustomTextField.swift in Sources */,
+				24E1976B291D62A500EACA97 /* MessageView.swift in Sources */,
+				24E19761291D566200EACA97 /* Profile.swift in Sources */,
+				24E1975D291D55B400EACA97 /* Channel.swift in Sources */,
 				241C460E290F3DDC00E43262 /* ChannelView.swift in Sources */,
+				24E1975F291D562300EACA97 /* Message.swift in Sources */,
+				24E19763291D56AF00EACA97 /* Reaction.swift in Sources */,
+				24E19767291D613500EACA97 /* HeaderView.swift in Sources */,
+				24E19769291D617000EACA97 /* FooterView.swift in Sources */,
 				241C4600290F3C8300E43262 /* ContentView.swift in Sources */,
 				241C45FE290F3C8300E43262 /* SlackApp.swift in Sources */,
-				2461874D29152D4300132630 /* Message.swift in Sources */,
 				2452E24E29193E2F00B1E177 /* ChannelListViewModel.swift in Sources */,
 				241C46362911E81700E43262 /* ChannelsFeedView.swift in Sources */,
 			);
