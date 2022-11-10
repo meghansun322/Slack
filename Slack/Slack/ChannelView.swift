@@ -21,88 +21,47 @@ struct ChannelView: View {
         }
     }
     
-    
-    
     var channel: ChannelViewModel
     
     @State var myMessage: String = ""
     
     var body: some View {
+        
         NavigationStack{
             
             ZStack{
-                Color.newPrimaryColor
+                Color("misty-gray")
                     .ignoresSafeArea()
                
-                VStack{
+                VStack {
                     
                     VStack (alignment: .leading){
                         
-                      
-                    
-                            ForEach(channel.messages, id: \.self){ item in
-                                messageView(message: item)
-                            }
-                            
-                        
-                        
-                        
-                        
-                        
+                        ForEach(channel.messages, id: \.self){ item in
+                            messageView(message: item)
+                        }
+                       
                         Spacer()
                         
                         Divider()
                             .overlay(.gray)
-                        
-                        HStack {
-                            Image(systemName: "plus.circle")
-                            
-                            
-                            
-                            
-                            
-                            SuperTextField(
-                                placeholder: Text("Message #\(channel.name)").foregroundColor(.white),
-                                text:  $myMessage
-                            )
-                            .font(.subheadline)
-                            .onSubmit {
-                                channel.addMessage(message: myMessage)
-                                myMessage = ""
-                                print(channel.messages)
-                            }
-                            
-                            
-                            
-                            
-                            
-                            
-                            Spacer()
-                            Image(systemName: "mic")
-                        }
-                        .padding()
-                        .foregroundColor(.white)
-                        
+                   
+                        MessageInputView(channel: channel, myMessage: $myMessage)
                         
                         Divider()
                             .overlay(.gray)
                             .padding(.bottom, 20)
-                        
-                       
-                        
-                        
-                        
+  
                     }
                     
                     footerIconView()
-                        .padding(.bottom)
-                    
-                    
+  
                 }
-                .navigationBarBackButtonHidden(true)
-                .navigationBarItems(leading: backButton)
+                
             
             }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: backButton)
             
         }
     }
@@ -149,7 +108,7 @@ struct ChannelView: View {
                             .foregroundColor(.white)
                             .padding(5)
                             .padding([.leading,.trailing], 5)
-                            .background( Color(UIColor.lightGray)
+                            .background( Color("opaque-light-gray")
                                 .opacity(0.6))
                             .clipShape(Capsule())
                             if (!message.reactions.isEmpty){
@@ -157,7 +116,7 @@ struct ChannelView: View {
                                     .foregroundColor(.white)
                                     .padding(5)
                                     .padding([.leading,.trailing], 5)
-                                    .background(Color(UIColor.lightGray)
+                                    .background( Color("opaque-light-gray")
                                         .opacity(0.5))
                                     .clipShape(Capsule())
                                 
@@ -190,18 +149,13 @@ struct ChannelView: View {
                     Text("# \(channel.name)")
                         .fontWeight(.bold)
                         .foregroundColor(.white)
-                    
-                    Text("\(channel.member_count) members, \(channel.pin_count) pins")
-                        .foregroundColor(.gray)
+
+                    Text("\(channel.member_count) members")
+                        .foregroundColor(Color("light-gray"))
                         .font(.footnote)
-                    
+
                 }
-//                
-//                            Spacer()
-//                
-//                            Image(systemName: "headphones")
-                .foregroundColor(.white)
-                
+
             }
             .padding([.top,.bottom])
             
@@ -262,29 +216,57 @@ struct ChannelView: View {
                 
             }
             .foregroundColor(.gray)
-            .padding(.top, 5)
-            
-            
         }
     }
 }
     
     
-    struct SuperTextField: View {
-        
-        var placeholder: Text
-        @Binding var text: String
-        var editingChanged: (Bool)->() = { _ in }
-        var commit: ()->() = { }
-        
-        var body: some View {
-            ZStack(alignment: .leading) {
-                if text.isEmpty { placeholder }
-                TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
-            }
+struct SuperTextField: View {
+    
+    var placeholder: Text
+    @Binding var text: String
+    var editingChanged: (Bool)->() = { _ in }
+    var commit: ()->() = { }
+    
+    var body: some View {
+        ZStack(alignment: .leading) {
+            if text.isEmpty { placeholder }
+            TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
         }
+    }
+    
+}
+
+struct MessageInputView: View {
+    var channel: ChannelViewModel
+    @Binding var myMessage: String
+    
+    var body: some View {
+        
+        HStack {
+            Image(systemName: "plus.circle")
+    
+            SuperTextField(
+                placeholder: Text("Message #\(channel.name)")
+                    .font(.headline),
+                text:  $myMessage
+            )
+            .font(.subheadline)
+            .onSubmit {
+                channel.addMessage(message: myMessage)
+                myMessage = ""
+                print(channel.messages)
+            }
+      
+            
+            Spacer()
+            Image(systemName: "mic")
+        }
+        .padding()
+        .foregroundColor(Color("light-gray"))
         
     }
+}
 
 struct ChannelView_Previews: PreviewProvider {
     

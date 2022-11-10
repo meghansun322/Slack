@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-extension Color {
-    static let oldPrimaryColor = Color(UIColor.systemIndigo)
-    static let newPrimaryColor = Color("misty-gray")
-}
-
 struct ChannelsFeedView: View {
     @State var search = ""
     
@@ -26,7 +21,7 @@ struct ChannelsFeedView: View {
         NavigationStack {
             
             ZStack{
-                Color.newPrimaryColor
+                Color("misty-gray")
                     .ignoresSafeArea()
                 
                 VStack{
@@ -75,12 +70,13 @@ struct ChannelsFeedView: View {
                             
                         }
                     }
+                    
                     Divider()
                         .overlay(.white)
-                    footerIconView()
                     
+                    footerIconView()
                 }
-                .foregroundColor(.white)
+                .foregroundColor(Color("light-gray"))
             }
             
         }
@@ -132,7 +128,7 @@ struct TopFeedView: View {
         
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.white, lineWidth: 0.5)
+                    .stroke(Color.white, lineWidth: 0.25)
             )
             .padding(.top, 5)
             .padding([.leading, .trailing], 10)
@@ -151,6 +147,8 @@ struct FeedHeadingView: View {
         HStack{
             Text(title)
                 .fontWeight(.bold)
+                .font(.subheadline)
+                .foregroundColor(.white)
             
             Spacer()
             
@@ -255,8 +253,6 @@ struct footerIconView: View {
         }
         .foregroundColor(.gray)
         .padding(.top, 5)
-    
-        
     }
 }
 
