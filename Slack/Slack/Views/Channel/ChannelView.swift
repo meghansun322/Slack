@@ -23,6 +23,7 @@ struct ChannelView: View {
     
     @State var myMessage: String = ""
     
+    
     var body: some View {
         
         NavigationStack{
@@ -55,8 +56,7 @@ struct ChannelView: View {
                     FooterView()
                     
                 }
-                
-                
+
             }
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: backButton)
@@ -95,6 +95,15 @@ struct MessageInputView: View {
     @Binding var channel: Channel
     @Binding var myMessage: String
     
+    var currentTime: String {
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh:mm a"
+        let dateString = "\(formatter.string(from: Date()))"
+        return dateString
+
+    }
+    
     var body: some View {
         
         HStack {
@@ -107,7 +116,7 @@ struct MessageInputView: View {
             )
             .font(.subheadline)
             .onSubmit {
-                channel.messages.append(Message(name: "Meghan Sun", profile_pic: "meghansun", time: getTime() , message: myMessage))
+                channel.messages.append(Message(name: "Meghan Sun", profile_pic: "meghansun", time: currentTime , message: myMessage))
                 myMessage = ""
                 print(channel.messages)
             }
@@ -129,11 +138,4 @@ struct ChannelView_Previews: PreviewProvider {
     }
 }
 
-func getTime() -> String {
-    
-    let formatter = DateFormatter()
-    formatter.dateFormat = "hh:mm a"
-    let dateString = "\(formatter.string(from: Date()))"
-    return dateString
 
-}

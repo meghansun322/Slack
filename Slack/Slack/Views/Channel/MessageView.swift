@@ -16,7 +16,7 @@ struct MessageView: View {
                 
                 Image("\(message.profile_pic)")
                     .resizable()
-                    .frame(width: 45, height: 45)
+                    .frame(width: 40, height: 40)
                     .cornerRadius(6)
                 
                 
