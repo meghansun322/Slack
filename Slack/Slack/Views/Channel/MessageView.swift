@@ -36,21 +36,10 @@ struct MessageView: View {
                     
                     HStack{
                         ForEach(message.reactions) { reaction in
-                            Button {
-                                
-                            } label: {
-                                Text("\(reaction.emoji)  \(reaction.count)" )
-                                    .font(.subheadline)
-                                    .fontWeight(.bold)
-                            }
+                            ReactionView(reaction: reaction)
                             
                         }
-                        .foregroundColor(.white)
-                        .padding(5)
-                        .padding([.leading,.trailing], 5)
-                        .background( Color("opaque-light-gray")
-                            .opacity(0.6))
-                        .clipShape(Capsule())
+                       
                         if (!message.reactions.isEmpty){
                             Image(systemName: "face.smiling")
                                 .foregroundColor(.white)

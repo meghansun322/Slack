@@ -22,6 +22,9 @@
 		24E19769291D617000EACA97 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E19768291D617000EACA97 /* FooterView.swift */; };
 		24E1976B291D62A500EACA97 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1976A291D62A500EACA97 /* MessageView.swift */; };
 		24E1976D291D646900EACA97 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1976C291D646900EACA97 /* CustomTextField.swift */; };
+		24E19770292033BA00EACA97 /* ChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1976F292033BA00EACA97 /* ChannelViewModel.swift */; };
+		24E197722920372400EACA97 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E197712920372400EACA97 /* MessageViewModel.swift */; };
+		24E1977429203D2B00EACA97 /* ReactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1977329203D2B00EACA97 /* ReactionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		24E19768291D617000EACA97 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		24E1976A291D62A500EACA97 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		24E1976C291D646900EACA97 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		24E1976F292033BA00EACA97 /* ChannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewModel.swift; sourceTree = "<group>"; };
+		24E197712920372400EACA97 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		24E1977329203D2B00EACA97 /* ReactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,8 @@
 				241C4601290F3C8500E43262 /* Assets.xcassets */,
 				241C4603290F3C8500E43262 /* Preview Content */,
 				2452E24D29193E2F00B1E177 /* ChannelListViewModel.swift */,
+				24E1976F292033BA00EACA97 /* ChannelViewModel.swift */,
+				24E197712920372400EACA97 /* MessageViewModel.swift */,
 			);
 			path = Slack;
 			sourceTree = "<group>";
@@ -128,6 +136,7 @@
 			children = (
 				241C460D290F3DDC00E43262 /* ChannelView.swift */,
 				24E1976A291D62A500EACA97 /* MessageView.swift */,
+				24E1977329203D2B00EACA97 /* ReactionView.swift */,
 			);
 			path = Channel;
 			sourceTree = "<group>";
@@ -209,10 +218,13 @@
 				241C460E290F3DDC00E43262 /* ChannelView.swift in Sources */,
 				24E1975F291D562300EACA97 /* Message.swift in Sources */,
 				24E19763291D56AF00EACA97 /* Reaction.swift in Sources */,
+				24E197722920372400EACA97 /* MessageViewModel.swift in Sources */,
 				24E19767291D613500EACA97 /* HeaderView.swift in Sources */,
+				24E19770292033BA00EACA97 /* ChannelViewModel.swift in Sources */,
 				24E19769291D617000EACA97 /* FooterView.swift in Sources */,
 				241C4600290F3C8300E43262 /* ContentView.swift in Sources */,
 				241C45FE290F3C8300E43262 /* SlackApp.swift in Sources */,
+				24E1977429203D2B00EACA97 /* ReactionView.swift in Sources */,
 				2452E24E29193E2F00B1E177 /* ChannelListViewModel.swift in Sources */,
 				241C46362911E81700E43262 /* ChannelsFeedView.swift in Sources */,
 			);

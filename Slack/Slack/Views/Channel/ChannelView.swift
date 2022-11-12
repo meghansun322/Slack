@@ -35,8 +35,8 @@ struct ChannelView: View {
                     
                     VStack (alignment: .leading){
                         
-                        ForEach($channel.messages, id: \.self){ $item in
-                            MessageView(message: $item)
+                        ForEach($channel.messages, id: \.self){ item in
+                            MessageView(message: item)
                         }
                         
                         Spacer()
