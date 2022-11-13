@@ -36,8 +36,8 @@ struct ChannelView: View {
                     
                     VStack (alignment: .leading){
                         
-                        ForEach($channel.messages, id: \.self){ item in
-                            MessageView(message: item)
+                        ForEach($channel.messages, id: \.self){ $item in
+                            MessageView(message: $item)
                         }
                         
                         Spacer()
@@ -46,12 +46,11 @@ struct ChannelView: View {
                             .overlay(.gray)
                         
                         MessageInputView(channel: $channel, myMessage: $myMessage)
-                        
-                        Divider()
-                            .overlay(.gray)
-                            .padding(.bottom, 20)
-                        
+                       
                     }
+                    
+                    Divider()
+                        .overlay(.white)
                     
                     FooterView()
                     

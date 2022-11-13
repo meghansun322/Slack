@@ -45,8 +45,8 @@ struct Channel: Codable, Hashable {
 
 
         Channel(name: "ios-academy-f22", member_count: 28, pin_count: 2, messages: [
-            Message(name: "Alec Nipp", profile_pic: "yellow-profile", time: "4:01 PM", message: "@channel IMPORTANT ANNOUNCEMENT 📣❗️ We will not be hosting iOS Academy in our usual spot today. There’s a speaker event going on, so we’re moving to SN115 for today. See y’all at 5:30 🔥"),
-            Message(name: "Alec Nipp", profile_pic: "yellow-profile", time: "6:44 PM", message: "@channel Great work today, everyone! I realize the demo today was kinda confusing, so here’s the link to an example solution (my own personal GitHub repo). Clone the source code and take a look if you’d like, or you can keep trying to work it out yourself. Remember to work on your final projects and get them done before Sunday. Unless you tell me otherwise, I’m assuming you all will present your projects in person at the Gala. See y’all Sunday 🕺."),
+            Message(name: "Alec Nipp", profile_pic: "yellow-profile", time: "4:01 PM", message: "IMPORTANT ANNOUNCEMENT 📣❗️ We will not be hosting iOS Academy in our usual spot today. There’s a speaker event going on, so we’re moving to SN115 for today. See y’all at 5:30 🔥"),
+            Message(name: "Alec Nipp", profile_pic: "yellow-profile", time: "6:44 PM", message: "Great work today, everyone! I realize the demo today was kinda confusing, so here’s the link to an example solution (my own personal GitHub repo). Clone the source code and take a look if you’d like, or you can keep trying to work it out yourself. Remember to work on your final projects and get them done before Sunday. Unless you tell me otherwise, I’m assuming you all will present your projects in person at the Gala. See y’all Sunday 🕺.", reactions: [Reaction(emoji: "🕺", count: 2)]),
             Message(name: "Meghan Sun", profile_pic: "meghansun", time: "10:00 PM", message: "yay!"),
         ]),
 
