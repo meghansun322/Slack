@@ -2,7 +2,7 @@
 
 A **Swift** and **SwiftUI** recreation of ***Slack***, a messaging application that connects people to the information they need in their day-to-day work. 
 
-<img src="https://github.com/appteamcarolina/f22-academy-finalproject-meghansun322/blob/main/Slack.gif" width="200"/>
+<img src="https://github.com/appteamcarolina/f22-academy-finalproject-meghansun322/blob/main/Slack%20Final.gif" width="200"/>
 
 ## Features
 
