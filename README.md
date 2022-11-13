@@ -21,11 +21,16 @@ A **Swift** and **SwiftUI** recreation of ***Slack***, a messaging application t
 - edit profile
 - change to light mode
 
+*From a Developer Perspective, I hope to:*
+
+- refactor into MVVM form
+- have changes to state save when go back and forward from page -- using classes vs structs
+
 ## How to Install/Run
 
 - Install Xcode
 
-- `git clone https://github.com/appteamcarolina/f22-academy-dem03-countey-meghansun322.git`
+- `git clone https://github.com/appteamcarolina/f22-academy-finalproject-meghansun322`
 
 - Open Xcode + Build
 
