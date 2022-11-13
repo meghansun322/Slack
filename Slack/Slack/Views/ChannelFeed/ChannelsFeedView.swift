@@ -11,6 +11,7 @@ struct ChannelsFeedView: View {
     @State var search = ""
     
     @StateObject var vm = ChannelListViewModel()
+    @State var feedIsTyping: Bool = false
     
     var body: some View {
         
@@ -27,7 +28,7 @@ struct ChannelsFeedView: View {
                     ScrollView {
                         VStack (alignment: .leading, spacing: 20){
                             
-                            TopFeedView(search: $search)
+                            TopFeedView(search: $search, feedIsTyping: $feedIsTyping)
                                
                             
                             Divider()
@@ -70,7 +71,9 @@ struct ChannelsFeedView: View {
                     Divider()
                         .overlay(.white)
                     
-                    FooterView()
+                    if (!feedIsTyping){
+                        FooterView()
+                    }
                 }
                 .foregroundColor(Color("light-gray"))
             }
@@ -108,12 +111,14 @@ struct FeedsHeaderView: View {
 
 struct TopFeedView: View {
     @Binding var search: String
+    @Binding var feedIsTyping: Bool
     
     var body: some View {
         
         CustomTextField(
             placeholder: Text("Jump to...").foregroundColor(.white),
-            text:  $search
+            text:  $search,
+            onEditingChanged: {self.feedIsTyping = $0}
         )
             .padding(12)
         

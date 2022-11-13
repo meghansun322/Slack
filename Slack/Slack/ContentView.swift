@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    init() {
+            UITextField.appearance().keyboardAppearance = .dark
+        
+        }
+    
     var body: some View {
-        ChannelsFeedView()
+            ChannelsFeedView()
     }
 }
 

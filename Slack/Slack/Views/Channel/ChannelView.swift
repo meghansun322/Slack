@@ -22,6 +22,7 @@ struct ChannelView: View {
     @State var channel: Channel
     
     @State var myMessage: String = ""
+    @State var isTyping: Bool = false
     
     
     var body: some View {
@@ -45,14 +46,18 @@ struct ChannelView: View {
                         Divider()
                             .overlay(.gray)
                         
-                        MessageInputView(channel: $channel, myMessage: $myMessage)
+                        MessageInputView(channel: $channel, myMessage: $myMessage,
+                        isTyping: $isTyping)
                        
                     }
                     
                     Divider()
                         .overlay(.white)
                     
-                    FooterView()
+                    if (!isTyping){
+                        FooterView()
+                    }
+                   
                     
                 }
 
@@ -93,6 +98,7 @@ struct ChannelHeaderView: View {
 struct MessageInputView: View {
     @Binding var channel: Channel
     @Binding var myMessage: String
+    @Binding var isTyping: Bool
     
     var currentTime: String {
         
@@ -111,7 +117,8 @@ struct MessageInputView: View {
             CustomTextField(
                 placeholder: Text("Message #\(channel.name)")
                     .font(.headline),
-                text:  $myMessage
+                text:  $myMessage,
+                onEditingChanged: {self.isTyping = $0}
             )
             .font(.subheadline)
             .onSubmit {
