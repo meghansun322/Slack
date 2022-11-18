@@ -15,11 +15,11 @@ struct ChannelView: View {
         Button(action: {
             self.presentationMode.wrappedValue.dismiss()
         }) {
-            ChannelHeaderView(channel: $channel)
+            ChannelHeaderView(channel: channel.model)
         }
     }
     
-    @State var channel: Channel
+    @StateObject var channel: ChannelViewModel
     
     @State var myMessage: String = ""
     @State var isTyping: Bool = false
@@ -37,8 +37,8 @@ struct ChannelView: View {
                     
                     VStack (alignment: .leading){
                         
-                        ForEach($channel.messages, id: \.self){ $item in
-                            MessageView(message: $item)
+                        ForEach(channel.messages, id: \.self){ item in
+                            MessageView(message: item)
                         }
                         
                         Spacer()
@@ -46,17 +46,14 @@ struct ChannelView: View {
                         Divider()
                             .overlay(.gray)
                         
-                        MessageInputView(channel: $channel, myMessage: $myMessage,
+                        MessageInputView(channel: channel, myMessage: $myMessage,
                         isTyping: $isTyping)
                        
                     }
                     
                     Divider()
                         .overlay(.white)
-                    
-                    if (!isTyping){
-                        FooterView()
-                    }
+                 
                    
                     
                 }
@@ -71,7 +68,7 @@ struct ChannelView: View {
 }
     
 struct ChannelHeaderView: View {
-    @Binding var channel: Channel
+    var channel: Channel
     
     var body: some View {
         HStack (spacing: 10){
@@ -96,18 +93,9 @@ struct ChannelHeaderView: View {
 
 
 struct MessageInputView: View {
-    @Binding var channel: Channel
+    var channel: ChannelViewModel
     @Binding var myMessage: String
     @Binding var isTyping: Bool
-    
-    var currentTime: String {
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "hh:mm a"
-        let dateString = "\(formatter.string(from: Date()))"
-        return dateString
-
-    }
     
     var body: some View {
         
@@ -122,7 +110,7 @@ struct MessageInputView: View {
             )
             .font(.subheadline)
             .onSubmit {
-                channel.messages.append(Message(name: "Meghan Sun", profile_pic: "meghansun", time: currentTime , message: myMessage))
+                channel.addMessage(new: myMessage);
                 myMessage = ""
                 print(channel.messages)
             }
@@ -140,7 +128,7 @@ struct MessageInputView: View {
 struct ChannelView_Previews: PreviewProvider {
     
     static var previews: some View {
-        ChannelView(channel: .example[0])
+        ChannelView(channel: ChannelViewModel(channel: .example[0]))
     }
 }
 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MessageView: View {
-    @Binding var message: Message
+    var message: Message
     
     var body: some View {
         VStack {
@@ -63,19 +63,19 @@ struct MessageView: View {
     }
 }
 
-struct MessageView_Previews: PreviewProvider {
-    static var previews: some View {
-        ZStack{
-            Color.black
-                .ignoresSafeArea()
-            
-            VStack{
-                ForEach(.constant(Message.messages_example)){ message in
-                    MessageView(message: message)
-                }
-            }
-             
-        }
-        
-    }
-}
+//struct MessageView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ZStack{
+//            Color.black
+//                .ignoresSafeArea()
+//            
+//            VStack{
+//                ForEach(.constant(Message.messages_example)){ message in
+//                    MessageView(message: message)
+//                }
+//            }
+//             
+//        }
+//        
+//    }
+//}

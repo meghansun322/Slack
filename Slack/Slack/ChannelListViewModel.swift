@@ -10,5 +10,6 @@ import Foundation
 class ChannelListViewModel: ObservableObject {
     
     @Published var channels: [Channel] = Channel.example
+
     
 }

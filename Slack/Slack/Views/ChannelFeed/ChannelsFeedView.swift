@@ -39,7 +39,7 @@ struct ChannelsFeedView: View {
                             
                             ForEach($vm.channels, id: \.self) { $channel in
                                 NavigationLink {
-                                    ChannelView(channel: channel)
+                                    ChannelView(channel: ChannelViewModel(channel: channel))
                                 } label: {
                                     ChannelsFeedRowView(symbol: "number", name: channel.name)
                                     
@@ -71,9 +71,7 @@ struct ChannelsFeedView: View {
                     Divider()
                         .overlay(.white)
                     
-                    if (!feedIsTyping){
-                        FooterView()
-                    }
+                   
                 }
                 .foregroundColor(Color("light-gray"))
             }
