@@ -9,12 +9,15 @@ import SwiftUI
 
 struct MentionsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            HeaderView(title: "Mentions & Reactions")
+            Spacer()
+        }
     }
 }
 
 struct MentionsView_Previews: PreviewProvider {
     static var previews: some View {
-        MentionsView()
+        MentionsView().preferredColorScheme(.dark)
     }
 }

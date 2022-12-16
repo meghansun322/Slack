@@ -30,8 +30,7 @@ struct ChannelView: View {
         NavigationStack{
             
             ZStack{
-                Color("misty-gray")
-                    .ignoresSafeArea()
+                
                 
                 VStack {
                     
@@ -50,11 +49,7 @@ struct ChannelView: View {
                         isTyping: $isTyping)
                        
                     }
-                    
-                    Divider()
-                        .overlay(.white)
-                 
-                   
+
                     
                 }
 
@@ -128,7 +123,7 @@ struct MessageInputView: View {
 struct ChannelView_Previews: PreviewProvider {
     
     static var previews: some View {
-        ChannelView(channel: ChannelViewModel(channel: .example[0]))
+        ChannelView(channel: ChannelViewModel(channel: .example[0])).preferredColorScheme(.dark)
     }
 }
 

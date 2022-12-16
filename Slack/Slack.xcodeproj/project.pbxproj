@@ -15,6 +15,7 @@
 		241C46362911E81700E43262 /* ChannelsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C46352911E81700E43262 /* ChannelsFeedView.swift */; };
 		243FC54F2927D28800D83952 /* ChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243FC54E2927D28800D83952 /* ChannelViewModel.swift */; };
 		2452E24E29193E2F00B1E177 /* ChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452E24D29193E2F00B1E177 /* ChannelListViewModel.swift */; };
+		24AE0DEC294CCB4700AA6D60 /* JumpToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE0DEB294CCB4700AA6D60 /* JumpToView.swift */; };
 		24B1FB522928509600525734 /* DirectMessagesHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1FB512928509600525734 /* DirectMessagesHomeView.swift */; };
 		24B1FB54292850FD00525734 /* MentionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1FB53292850FD00525734 /* MentionsView.swift */; };
 		24B1FB562928513500525734 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1FB552928513500525734 /* SearchView.swift */; };
@@ -40,6 +41,7 @@
 		241C46352911E81700E43262 /* ChannelsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsFeedView.swift; sourceTree = "<group>"; };
 		243FC54E2927D28800D83952 /* ChannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewModel.swift; sourceTree = "<group>"; };
 		2452E24D29193E2F00B1E177 /* ChannelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewModel.swift; sourceTree = "<group>"; };
+		24AE0DEB294CCB4700AA6D60 /* JumpToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpToView.swift; sourceTree = "<group>"; };
 		24B1FB512928509600525734 /* DirectMessagesHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectMessagesHomeView.swift; sourceTree = "<group>"; };
 		24B1FB53292850FD00525734 /* MentionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentionsView.swift; sourceTree = "<group>"; };
 		24B1FB552928513500525734 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				24E1975B291D55A500EACA97 /* Models */,
 				241C45FD290F3C8300E43262 /* SlackApp.swift */,
 				241C45FF290F3C8300E43262 /* ContentView.swift */,
+				24B1FB572928518400525734 /* ProfileView.swift */,
 				24B1FB552928513500525734 /* SearchView.swift */,
 				24B1FB53292850FD00525734 /* MentionsView.swift */,
 				24B1FB512928509600525734 /* DirectMessagesHomeView.swift */,
@@ -125,8 +128,8 @@
 				24E1976E291D654700EACA97 /* Channel */,
 				24E19765291D60F300EACA97 /* ChannelFeed */,
 				24E19768291D617000EACA97 /* FooterView.swift */,
-				24B1FB572928518400525734 /* ProfileView.swift */,
 				24E1976C291D646900EACA97 /* CustomTextField.swift */,
+				24AE0DEB294CCB4700AA6D60 /* JumpToView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				24E19761291D566200EACA97 /* Profile.swift in Sources */,
 				24E1975D291D55B400EACA97 /* Channel.swift in Sources */,
 				241C460E290F3DDC00E43262 /* ChannelView.swift in Sources */,
+				24AE0DEC294CCB4700AA6D60 /* JumpToView.swift in Sources */,
 				24E1975F291D562300EACA97 /* Message.swift in Sources */,
 				24E19763291D56AF00EACA97 /* Reaction.swift in Sources */,
 				24E19767291D613500EACA97 /* HeaderView.swift in Sources */,

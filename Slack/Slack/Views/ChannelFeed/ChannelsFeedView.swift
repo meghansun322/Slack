@@ -18,8 +18,7 @@ struct ChannelsFeedView: View {
         NavigationStack {
             
             ZStack{
-                Color("misty-gray")
-                    .ignoresSafeArea()
+              
                 
                 VStack{
                     
@@ -28,8 +27,11 @@ struct ChannelsFeedView: View {
                     ScrollView {
                         VStack (alignment: .leading, spacing: 20){
                             
-                            TopFeedView(search: $search, feedIsTyping: $feedIsTyping)
-                               
+                            JumpToView(search: $search, feedIsTyping: $feedIsTyping)
+                            
+                            ChannelsFeedRowView(symbol: "ellipsis.message", name: "Threads")
+                            
+                            ChannelsFeedRowView(symbol: "paperplane", name: "Drafts & Sent")
                             
                             Divider()
                                 .overlay(.white)
@@ -67,11 +69,6 @@ struct ChannelsFeedView: View {
                             
                         }
                     }
-                    
-                    Divider()
-                        .overlay(.white)
-                    
-                   
                 }
                 .foregroundColor(Color("light-gray"))
             }
@@ -82,7 +79,7 @@ struct ChannelsFeedView: View {
 
 struct ChannelsFeedView_Previews: PreviewProvider {
     static var previews: some View {
-        ChannelsFeedView()
+        ChannelsFeedView().preferredColorScheme(.dark)
     }
 }
 
@@ -103,36 +100,10 @@ struct FeedsHeaderView: View {
         }
         .padding([.trailing, .leading, .bottom])
         .foregroundColor(.white)
-        .background(Color.black)
+        .background(Color("header-accent"))
     }
 }
 
-struct TopFeedView: View {
-    @Binding var search: String
-    @Binding var feedIsTyping: Bool
-    
-    var body: some View {
-        
-        CustomTextField(
-            placeholder: Text("Jump to...").foregroundColor(.white),
-            text:  $search,
-            onEditingChanged: {self.feedIsTyping = $0}
-        )
-            .padding(12)
-        
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.white, lineWidth: 0.25)
-            )
-            .padding(.top, 5)
-            .padding([.leading, .trailing], 10)
-            .foregroundColor(Color.white)
-        
-        ChannelsFeedRowView(symbol: "ellipsis.message", name: "Threads")
-        
-        ChannelsFeedRowView(symbol: "paperplane", name: "Drafts & Sent")
-    }
-}
 
 struct FeedHeadingView: View {
     var title: String
@@ -174,6 +145,7 @@ struct ChannelsFeedRowView: View {
 
 struct DirectMessageView: View {
     var profile: Profile
+   
     
     var body: some View {
         HStack {

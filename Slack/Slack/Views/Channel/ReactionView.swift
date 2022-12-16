@@ -36,6 +36,6 @@ struct ReactionView: View {
 
 struct ReactionView_Previews: PreviewProvider {
     static var previews: some View {
-        ReactionView(reaction: Reaction(emoji: "👍🏼", count: 5))
+        ReactionView(reaction: Reaction(emoji: "👍🏼", count: 5)).preferredColorScheme(.dark)
     }
 }
