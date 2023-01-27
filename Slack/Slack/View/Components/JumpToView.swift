@@ -14,7 +14,7 @@ struct JumpToView: View {
     var body: some View {
         
         CustomTextField(
-            placeholder: Text("Jump to...").foregroundColor(.white),
+            placeholder: Text("Jump to...").foregroundColor(Color("primary-text")),
             text:  $search,
             onEditingChanged: {self.feedIsTyping = $0}
         )
@@ -22,11 +22,11 @@ struct JumpToView: View {
         
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.white, lineWidth: 0.25)
+                    .stroke(Color("primary-text"), lineWidth: 0.25)
             )
             .padding(.top, 5)
             .padding([.leading, .trailing], 10)
-            .foregroundColor(Color.white)
+         
     
     }
 }

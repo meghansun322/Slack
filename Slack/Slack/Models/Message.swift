@@ -4,7 +4,6 @@
 //
 //  Created by Meghan Sun on 11/10/22.
 //
-
 import Foundation
 
 struct Message: Codable, Hashable, Identifiable {

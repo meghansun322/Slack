@@ -27,11 +27,11 @@ struct ChannelView: View {
     
     var body: some View {
         
-        NavigationStack{
+        NavigationStack {
             
             ZStack{
-                
-                
+             
+               
                 VStack {
                     
                     VStack (alignment: .leading){
@@ -43,7 +43,7 @@ struct ChannelView: View {
                         Spacer()
                         
                         Divider()
-                            .overlay(.gray)
+                            .overlay(Color("primary-text"))
                         
                         MessageInputView(channel: channel, myMessage: $myMessage,
                         isTyping: $isTyping)
@@ -69,20 +69,21 @@ struct ChannelHeaderView: View {
         HStack (spacing: 10){
             
             Image(systemName: "chevron.left")
-                .foregroundColor(.white)
+             
             
             VStack (alignment: .leading){
                 Text("# \(channel.name)")
                     .fontWeight(.bold)
-                    .foregroundColor(.white)
+                 
 
                 Text("\(channel.member_count) members")
-                    .foregroundColor(Color("light-gray"))
                     .font(.footnote)
             }
 
         }
         .padding([.top,.bottom])
+        
+        
     }
 }
 
@@ -115,7 +116,7 @@ struct MessageInputView: View {
             Image(systemName: "mic")
         }
         .padding()
-        .foregroundColor(Color("light-gray"))
+        .foregroundColor(Color("primary-text"))
         
     }
 }

@@ -8,53 +8,61 @@
 
 /* Begin PBXBuildFile section */
 		241C45FE290F3C8300E43262 /* SlackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C45FD290F3C8300E43262 /* SlackApp.swift */; };
-		241C4600290F3C8300E43262 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C45FF290F3C8300E43262 /* ContentView.swift */; };
-		241C4602290F3C8500E43262 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241C4601290F3C8500E43262 /* Assets.xcassets */; };
 		241C4605290F3C8500E43262 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241C4604290F3C8500E43262 /* Preview Assets.xcassets */; };
-		241C460E290F3DDC00E43262 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C460D290F3DDC00E43262 /* ChannelView.swift */; };
-		241C46362911E81700E43262 /* ChannelsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C46352911E81700E43262 /* ChannelsFeedView.swift */; };
-		243FC54F2927D28800D83952 /* ChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243FC54E2927D28800D83952 /* ChannelViewModel.swift */; };
-		2452E24E29193E2F00B1E177 /* ChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452E24D29193E2F00B1E177 /* ChannelListViewModel.swift */; };
-		24AE0DEC294CCB4700AA6D60 /* JumpToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE0DEB294CCB4700AA6D60 /* JumpToView.swift */; };
-		24B1FB522928509600525734 /* DirectMessagesHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1FB512928509600525734 /* DirectMessagesHomeView.swift */; };
-		24B1FB54292850FD00525734 /* MentionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1FB53292850FD00525734 /* MentionsView.swift */; };
-		24B1FB562928513500525734 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1FB552928513500525734 /* SearchView.swift */; };
-		24B1FB582928518400525734 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1FB572928518400525734 /* ProfileView.swift */; };
+		242C244029836F440061635A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C243D29836F440061635A /* ContentView.swift */; };
+		242C244229836F9A0061635A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 242C244129836F9A0061635A /* Assets.xcassets */; };
+		242C2444298370460061635A /* ChannelsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C2443298370450061635A /* ChannelsFeedView.swift */; };
+		242C244E2983708C0061635A /* DirectMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C24462983708B0061635A /* DirectMessageView.swift */; };
+		242C244F2983708C0061635A /* JumpToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C24472983708B0061635A /* JumpToView.swift */; };
+		242C24502983708C0061635A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C24482983708B0061635A /* CustomTextField.swift */; };
+		242C24512983708C0061635A /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C24492983708B0061635A /* HeaderView.swift */; };
+		242C24522983708C0061635A /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C244A2983708C0061635A /* ChannelView.swift */; };
+		242C24532983708C0061635A /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C244B2983708C0061635A /* MessageView.swift */; };
+		242C24542983708C0061635A /* ReactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C244C2983708C0061635A /* ReactionView.swift */; };
+		242C24552983708C0061635A /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C244D2983708C0061635A /* FooterView.swift */; };
+		242C2458298370A90061635A /* DirectMessagesHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C2457298370A90061635A /* DirectMessagesHomeView.swift */; };
+		242C2460298370B50061635A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C245F298370B50061635A /* ProfileView.swift */; };
+		242C2462298370B90061635A /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C2461298370B80061635A /* SearchView.swift */; };
+		242C246D298370D90061635A /* ChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C246A298370D80061635A /* ChannelViewModel.swift */; };
+		242C246E298370D90061635A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C246C298370D90061635A /* ViewController.swift */; };
+		242C246F298370D90061635A /* DirectMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C2469298370D80061635A /* DirectMessageViewModel.swift */; };
+		242C2470298370D90061635A /* ChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C246B298370D90061635A /* ChannelListViewModel.swift */; };
+		242C2472298371510061635A /* MentionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C2471298371510061635A /* MentionsView.swift */; };
+		242C2474298371840061635A /* DirectMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C2473298371840061635A /* DirectMessage.swift */; };
+		2479E34629837238002D25D0 /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2479E34529837238002D25D0 /* Reaction.swift */; };
 		24E1975D291D55B400EACA97 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1975C291D55B400EACA97 /* Channel.swift */; };
 		24E1975F291D562300EACA97 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1975E291D562300EACA97 /* Message.swift */; };
 		24E19761291D566200EACA97 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E19760291D566200EACA97 /* Profile.swift */; };
-		24E19763291D56AF00EACA97 /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E19762291D56AF00EACA97 /* Reaction.swift */; };
-		24E19767291D613500EACA97 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E19766291D613500EACA97 /* HeaderView.swift */; };
-		24E19769291D617000EACA97 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E19768291D617000EACA97 /* FooterView.swift */; };
-		24E1976B291D62A500EACA97 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1976A291D62A500EACA97 /* MessageView.swift */; };
-		24E1976D291D646900EACA97 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1976C291D646900EACA97 /* CustomTextField.swift */; };
-		24E1977429203D2B00EACA97 /* ReactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1977329203D2B00EACA97 /* ReactionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		241C45FA290F3C8300E43262 /* Slack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		241C45FD290F3C8300E43262 /* SlackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackApp.swift; sourceTree = "<group>"; };
-		241C45FF290F3C8300E43262 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		241C4601290F3C8500E43262 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		241C4604290F3C8500E43262 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		241C460D290F3DDC00E43262 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
-		241C46352911E81700E43262 /* ChannelsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsFeedView.swift; sourceTree = "<group>"; };
-		243FC54E2927D28800D83952 /* ChannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewModel.swift; sourceTree = "<group>"; };
-		2452E24D29193E2F00B1E177 /* ChannelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewModel.swift; sourceTree = "<group>"; };
-		24AE0DEB294CCB4700AA6D60 /* JumpToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpToView.swift; sourceTree = "<group>"; };
-		24B1FB512928509600525734 /* DirectMessagesHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectMessagesHomeView.swift; sourceTree = "<group>"; };
-		24B1FB53292850FD00525734 /* MentionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentionsView.swift; sourceTree = "<group>"; };
-		24B1FB552928513500525734 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		24B1FB572928518400525734 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		242C243D29836F440061635A /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		242C244129836F9A0061635A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		242C2443298370450061635A /* ChannelsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsFeedView.swift; sourceTree = "<group>"; };
+		242C24462983708B0061635A /* DirectMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectMessageView.swift; sourceTree = "<group>"; };
+		242C24472983708B0061635A /* JumpToView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpToView.swift; sourceTree = "<group>"; };
+		242C24482983708B0061635A /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		242C24492983708B0061635A /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		242C244A2983708C0061635A /* ChannelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
+		242C244B2983708C0061635A /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		242C244C2983708C0061635A /* ReactionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionView.swift; sourceTree = "<group>"; };
+		242C244D2983708C0061635A /* FooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		242C2457298370A90061635A /* DirectMessagesHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectMessagesHomeView.swift; sourceTree = "<group>"; };
+		242C245F298370B50061635A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		242C2461298370B80061635A /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		242C2469298370D80061635A /* DirectMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectMessageViewModel.swift; sourceTree = "<group>"; };
+		242C246A298370D80061635A /* ChannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewModel.swift; sourceTree = "<group>"; };
+		242C246B298370D90061635A /* ChannelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewModel.swift; sourceTree = "<group>"; };
+		242C246C298370D90061635A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		242C2471298371510061635A /* MentionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentionsView.swift; sourceTree = "<group>"; };
+		242C2473298371840061635A /* DirectMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectMessage.swift; sourceTree = "<group>"; };
+		2479E34529837238002D25D0 /* Reaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Reaction.swift; path = ../Reaction.swift; sourceTree = "<group>"; };
 		24E1975C291D55B400EACA97 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		24E1975E291D562300EACA97 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		24E19760291D566200EACA97 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		24E19762291D56AF00EACA97 /* Reaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
-		24E19766291D613500EACA97 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		24E19768291D617000EACA97 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
-		24E1976A291D62A500EACA97 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
-		24E1976C291D646900EACA97 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		24E1977329203D2B00EACA97 /* ReactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,18 +95,13 @@
 		241C45FC290F3C8300E43262 /* Slack */ = {
 			isa = PBXGroup;
 			children = (
-				24E19764291D609E00EACA97 /* Views */,
 				24E1975B291D55A500EACA97 /* Models */,
+				2479E347298372AF002D25D0 /* View */,
+				2479E348298372FD002D25D0 /* View Model */,
 				241C45FD290F3C8300E43262 /* SlackApp.swift */,
-				241C45FF290F3C8300E43262 /* ContentView.swift */,
-				24B1FB572928518400525734 /* ProfileView.swift */,
-				24B1FB552928513500525734 /* SearchView.swift */,
-				24B1FB53292850FD00525734 /* MentionsView.swift */,
-				24B1FB512928509600525734 /* DirectMessagesHomeView.swift */,
-				241C4601290F3C8500E43262 /* Assets.xcassets */,
+				242C243D29836F440061635A /* ContentView.swift */,
+				242C244129836F9A0061635A /* Assets.xcassets */,
 				241C4603290F3C8500E43262 /* Preview Content */,
-				2452E24D29193E2F00B1E177 /* ChannelListViewModel.swift */,
-				243FC54E2927D28800D83952 /* ChannelViewModel.swift */,
 			);
 			path = Slack;
 			sourceTree = "<group>";
@@ -111,46 +114,55 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		242C2445298370780061635A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				242C244A2983708C0061635A /* ChannelView.swift */,
+				242C24482983708B0061635A /* CustomTextField.swift */,
+				242C24462983708B0061635A /* DirectMessageView.swift */,
+				242C244D2983708C0061635A /* FooterView.swift */,
+				242C24492983708B0061635A /* HeaderView.swift */,
+				242C24472983708B0061635A /* JumpToView.swift */,
+				242C244B2983708C0061635A /* MessageView.swift */,
+				242C244C2983708C0061635A /* ReactionView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2479E347298372AF002D25D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				242C2461298370B80061635A /* SearchView.swift */,
+				242C2471298371510061635A /* MentionsView.swift */,
+				242C2443298370450061635A /* ChannelsFeedView.swift */,
+				242C246A298370D80061635A /* ChannelViewModel.swift */,
+				242C2469298370D80061635A /* DirectMessageViewModel.swift */,
+				242C2457298370A90061635A /* DirectMessagesHomeView.swift */,
+				242C245F298370B50061635A /* ProfileView.swift */,
+				242C2445298370780061635A /* Components */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2479E348298372FD002D25D0 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				242C246B298370D90061635A /* ChannelListViewModel.swift */,
+				242C246C298370D90061635A /* ViewController.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		24E1975B291D55A500EACA97 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				24E1975C291D55B400EACA97 /* Channel.swift */,
+				242C2473298371840061635A /* DirectMessage.swift */,
 				24E1975E291D562300EACA97 /* Message.swift */,
 				24E19760291D566200EACA97 /* Profile.swift */,
-				24E19762291D56AF00EACA97 /* Reaction.swift */,
+				2479E34529837238002D25D0 /* Reaction.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		24E19764291D609E00EACA97 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				24E1976E291D654700EACA97 /* Channel */,
-				24E19765291D60F300EACA97 /* ChannelFeed */,
-				24E19768291D617000EACA97 /* FooterView.swift */,
-				24E1976C291D646900EACA97 /* CustomTextField.swift */,
-				24AE0DEB294CCB4700AA6D60 /* JumpToView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		24E19765291D60F300EACA97 /* ChannelFeed */ = {
-			isa = PBXGroup;
-			children = (
-				241C46352911E81700E43262 /* ChannelsFeedView.swift */,
-				24E19766291D613500EACA97 /* HeaderView.swift */,
-			);
-			path = ChannelFeed;
-			sourceTree = "<group>";
-		};
-		24E1976E291D654700EACA97 /* Channel */ = {
-			isa = PBXGroup;
-			children = (
-				241C460D290F3DDC00E43262 /* ChannelView.swift */,
-				24E1976A291D62A500EACA97 /* MessageView.swift */,
-				24E1977329203D2B00EACA97 /* ReactionView.swift */,
-			);
-			path = Channel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				241C4605290F3C8500E43262 /* Preview Assets.xcassets in Resources */,
-				241C4602290F3C8500E43262 /* Assets.xcassets in Resources */,
+				242C244229836F9A0061635A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,26 +235,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24E1976D291D646900EACA97 /* CustomTextField.swift in Sources */,
-				24E1976B291D62A500EACA97 /* MessageView.swift in Sources */,
+				242C24522983708C0061635A /* ChannelView.swift in Sources */,
+				242C246F298370D90061635A /* DirectMessageViewModel.swift in Sources */,
+				242C244029836F440061635A /* ContentView.swift in Sources */,
 				24E19761291D566200EACA97 /* Profile.swift in Sources */,
+				242C246D298370D90061635A /* ChannelViewModel.swift in Sources */,
+				242C2470298370D90061635A /* ChannelListViewModel.swift in Sources */,
+				242C2474298371840061635A /* DirectMessage.swift in Sources */,
+				242C24552983708C0061635A /* FooterView.swift in Sources */,
 				24E1975D291D55B400EACA97 /* Channel.swift in Sources */,
-				241C460E290F3DDC00E43262 /* ChannelView.swift in Sources */,
-				24AE0DEC294CCB4700AA6D60 /* JumpToView.swift in Sources */,
+				242C2472298371510061635A /* MentionsView.swift in Sources */,
 				24E1975F291D562300EACA97 /* Message.swift in Sources */,
-				24E19763291D56AF00EACA97 /* Reaction.swift in Sources */,
-				24E19767291D613500EACA97 /* HeaderView.swift in Sources */,
-				24E19769291D617000EACA97 /* FooterView.swift in Sources */,
-				243FC54F2927D28800D83952 /* ChannelViewModel.swift in Sources */,
-				24B1FB562928513500525734 /* SearchView.swift in Sources */,
-				241C4600290F3C8300E43262 /* ContentView.swift in Sources */,
+				242C246E298370D90061635A /* ViewController.swift in Sources */,
+				242C24532983708C0061635A /* MessageView.swift in Sources */,
+				242C24502983708C0061635A /* CustomTextField.swift in Sources */,
+				242C2462298370B90061635A /* SearchView.swift in Sources */,
+				242C244F2983708C0061635A /* JumpToView.swift in Sources */,
+				242C24512983708C0061635A /* HeaderView.swift in Sources */,
+				242C2460298370B50061635A /* ProfileView.swift in Sources */,
+				242C244E2983708C0061635A /* DirectMessageView.swift in Sources */,
+				242C24542983708C0061635A /* ReactionView.swift in Sources */,
 				241C45FE290F3C8300E43262 /* SlackApp.swift in Sources */,
-				24E1977429203D2B00EACA97 /* ReactionView.swift in Sources */,
-				2452E24E29193E2F00B1E177 /* ChannelListViewModel.swift in Sources */,
-				24B1FB54292850FD00525734 /* MentionsView.swift in Sources */,
-				24B1FB582928518400525734 /* ProfileView.swift in Sources */,
-				24B1FB522928509600525734 /* DirectMessagesHomeView.swift in Sources */,
-				241C46362911E81700E43262 /* ChannelsFeedView.swift in Sources */,
+				242C2458298370A90061635A /* DirectMessagesHomeView.swift in Sources */,
+				2479E34629837238002D25D0 /* Reaction.swift in Sources */,
+				242C2444298370460061635A /* ChannelsFeedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

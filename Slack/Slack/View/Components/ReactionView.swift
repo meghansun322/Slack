@@ -24,13 +24,14 @@ struct ReactionView: View {
             Text("\(reaction.emoji)  \(reaction.count)" )
                 .font(.subheadline)
                 .fontWeight(.bold)
+                .foregroundColor(reaction.selected ? Color("reaction-text") :
+                                    Color("primary-text"))
         }
-        .foregroundColor(.white)
         .padding(5)
         .padding([.leading,.trailing], 5)
-        .background(reaction.selected ? Color("opaque-blue") : Color("opaque-light-gray")
-            .opacity(0.6))
+        .background(reaction.selected ? Color("reaction-selected") : Color("reaction-fade"))
         .clipShape(Capsule())
+        
     }
 }
 

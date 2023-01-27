@@ -42,40 +42,23 @@ struct MessageView: View {
                        
                         if (!message.reactions.isEmpty){
                             Image(systemName: "face.smiling")
-                                .foregroundColor(.white)
                                 .padding(5)
                                 .padding([.leading,.trailing], 5)
-                                .background( Color("opaque-light-gray")
+                                .background( Color("reaction-fade")
                                     .opacity(0.5))
                                 .clipShape(Capsule())
+                                
                             
                         }
                     }
-                    
+          
                     
                 }
-                .foregroundColor(.white)
+                
             }
-            .foregroundColor(.gray)
             .padding([.leading, .trailing, .top])
 
         }
     }
 }
 
-//struct MessageView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ZStack{
-//            Color.black
-//                .ignoresSafeArea()
-//            
-//            VStack{
-//                ForEach(.constant(Message.messages_example)){ message in
-//                    MessageView(message: message)
-//                }
-//            }
-//             
-//        }
-//        
-//    }
-//}

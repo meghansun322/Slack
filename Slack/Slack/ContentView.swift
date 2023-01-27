@@ -17,40 +17,48 @@ struct ContentView: View {
     var body: some View {
         
         ZStack{
+            
             TabView {
                 ChannelsFeedView()
                     .tabItem {
                         Label("Home", systemImage: "house.fill")
                     }
+
+                   
+                    
+                
                 DirectMessagesHomeView()
                     .tabItem {
                         Label("DMs", systemImage: "message")
                             
                     }
+               
                 
                 MentionsView()
                     .tabItem{
                         Label("Mentions", systemImage: "at")
                     }
+         
                 
                 SearchView()
                     .tabItem{
                         Label("Search", systemImage: "magnifyingglass")
                     }
+                  
                 
                 ProfileView()
                     .tabItem{
                         Label("You", systemImage: "face.smiling")
                            
                     }
+                   
             }
+           
             .accentColor(.white)
-            
-        }
-        .background(Color("main-background"))
-  
-                
         
+    
+        }
+
         
             }
     }

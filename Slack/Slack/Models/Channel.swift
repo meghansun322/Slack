@@ -4,7 +4,6 @@
 //
 //  Created by Meghan Sun on 11/10/22.
 //
-
 import Foundation
 
 struct Channel: Codable, Hashable {
@@ -68,11 +67,3 @@ struct Channel: Codable, Hashable {
 
     ]
 }
-    
-    
-
-
-
-
-  
-

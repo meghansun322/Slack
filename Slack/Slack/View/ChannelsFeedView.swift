@@ -11,6 +11,8 @@ struct ChannelsFeedView: View {
     @State var search = ""
     
     @StateObject var vm = ChannelListViewModel()
+    
+  
     @State var feedIsTyping: Bool = false
     
     var body: some View {
@@ -19,6 +21,7 @@ struct ChannelsFeedView: View {
             
             ZStack{
               
+                Color("main-background")
                 
                 VStack{
                     
@@ -34,7 +37,7 @@ struct ChannelsFeedView: View {
                             ChannelsFeedRowView(symbol: "paperplane", name: "Drafts & Sent")
                             
                             Divider()
-                                .overlay(.white)
+                                .overlay(Color("primary-text"))
                             
                             FeedHeadingView(title: "Channels")
 
@@ -57,20 +60,29 @@ struct ChannelsFeedView: View {
                             
                             
                             Divider()
-                                .overlay(.white)
+                                .overlay(Color("primary-text"))
                             
                             FeedHeadingView(title: "Direct Messages")
                            
                           
-                            ForEach(Profile.profiles_example, id: \.self) { profile in
-                                DirectMessageView(profile: profile)
+                            ForEach($vm.directMessages, id: \.self) { $directMessage in
+                                
+                                NavigationLink {
+                                    DirectMessageView(directMessage: DirectMessageViewModel(directMessage: directMessage))
+                                } label: {
+                                    DirectMessageRowView(profile: directMessage.names[0])
+                                    
+                                }
+                                
+                               
                                 
                             }
                             
                         }
                     }
                 }
-                .foregroundColor(Color("light-gray"))
+                .foregroundColor(Color("primary-text"))
+            
             }
             
         }
@@ -113,7 +125,6 @@ struct FeedHeadingView: View {
             Text(title)
                 .fontWeight(.bold)
                 .font(.subheadline)
-                .foregroundColor(.white)
             
             Spacer()
             
@@ -143,7 +154,7 @@ struct ChannelsFeedRowView: View {
 }
 
 
-struct DirectMessageView: View {
+struct DirectMessageRowView: View {
     var profile: Profile
    
     
